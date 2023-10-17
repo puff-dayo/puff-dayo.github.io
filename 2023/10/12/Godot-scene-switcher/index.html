@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://puff-dayo.github.io/images/1249182647.png">
 <meta property="og:image" content="https://puff-dayo.github.io/images/1EkzP0pFa.png">
 <meta property="article:published_time" content="2023-10-11T21:42:17.000Z">
-<meta property="article:modified_time" content="2023-10-17T20:20:42.930Z">
+<meta property="article:modified_time" content="2023-10-17T20:27:06.640Z">
 <meta property="article:author" content="Setsuna">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://puff-dayo.github.io/images/1249182647.png">
@@ -214,7 +214,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">func _on_quit_pressed():</span><br><span class="line">	SM.QuitGame()</span><br><span class="line"></span><br><span class="line">func _on_main_menu_pressed():</span><br><span class="line">	SM.SwitchScene(&quot;main&quot;)</span><br><span class="line"></span><br><span class="line">func _on_restart_pressed():</span><br><span class="line">    SM.RestartScene()</span><br></pre></td></tr></table></figure>
 
 <p>That’s it. Really simple.</p>
-<p><em>May you have a smoother game development,</em><br><em>and happy game-making with Godot 4.2!</em><br><em>Setsuna</em><br><em>23&#x2F;10&#x2F;18 Midnight</em></p>
+<p><em>May you have a smoother game development,</em><br><em>and happy game-making with Godot 4.2!</em><br><em>Setsuna</em><br><em>23&#x2F;10&#x2F;12 Midnight</em></p>
 <p><img src="/images/1EkzP0pFa.png"></p>
 
         
@@ -254,6 +254,23 @@
   
 </article>
 
+
+  
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <div id="gitalk-container"></div>
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+  <script type="text/javascript">
+      var gitalk = new Gitalk({
+          clientID: '6fa5795cc0947411f009',
+          clientSecret: 'e29acd809ae6ea9cb04a9751840c8cd45ecfe84c',
+          id: md5(location.pathname),
+          repo: 'puff-dayo.github.io',
+          owner: 'puff-dayo',
+          admin: 'puff-dayo'
+      })
+      gitalk.render('gitalk-container')
+  </script>
  
     </div>
     

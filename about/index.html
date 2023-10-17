@@ -206,6 +206,23 @@
   
 </article>
 
+
+  
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <div id="gitalk-container"></div>
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+  <script type="text/javascript">
+      var gitalk = new Gitalk({
+          clientID: '6fa5795cc0947411f009',
+          clientSecret: 'e29acd809ae6ea9cb04a9751840c8cd45ecfe84c',
+          id: md5(location.pathname),
+          repo: 'puff-dayo.github.io',
+          owner: 'puff-dayo',
+          admin: 'puff-dayo'
+      })
+      gitalk.render('gitalk-container')
+  </script>
  
     </div>
     
