@@ -14,28 +14,23 @@
   
 
   
-  <title>Godot 4.2 - Switch Scenes, Handle Scenes and Quit Game by GDScript | Setsuna Blog</title>
+  <title>Everyone&#39;s Diary | Setsuna Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="In this article, Setsuna will walk you through a handy GDScript class that simplifies the process of switching scenes, reloading the current scene, and quitting the game.  SceneManager classTo stream">
+  <meta name="description" content="Setsuna compiled this for personal archives, optimizing the PDF files for horizontal A4 paper divided into 3 columns, for paper archives and reading on landscape computer screens.  Setsuna did this 3">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Godot 4.2 - Switch Scenes, Handle Scenes and Quit Game by GDScript">
-<meta property="og:url" content="https://puff-dayo.github.io/2023/10/12/Godot-scene-switcher/index.html">
+<meta property="og:title" content="Everyone&#39;s Diary">
+<meta property="og:url" content="https://puff-dayo.github.io/2023/03/22/Everyone-s-Diary/index.html">
 <meta property="og:site_name" content="Setsuna Blog">
-<meta property="og:description" content="In this article, Setsuna will walk you through a handy GDScript class that simplifies the process of switching scenes, reloading the current scene, and quitting the game.  SceneManager classTo stream">
+<meta property="og:description" content="Setsuna compiled this for personal archives, optimizing the PDF files for horizontal A4 paper divided into 3 columns, for paper archives and reading on landscape computer screens.  Setsuna did this 3">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://puff-dayo.github.io/images/1249182647.png">
-<meta property="og:image" content="https://puff-dayo.github.io/images/1EkzP0pFa.png">
-<meta property="article:published_time" content="2023-10-11T21:42:17.000Z">
-<meta property="article:modified_time" content="2023-10-17T22:11:46.919Z">
+<meta property="article:published_time" content="2023-03-22T13:15:48.000Z">
+<meta property="article:modified_time" content="2023-10-18T12:56:57.872Z">
 <meta property="article:author" content="Setsuna">
-<meta property="article:tag" content="All">
-<meta property="article:tag" content="Godot">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://puff-dayo.github.io/images/1249182647.png">
   
   
     <link rel="shortcut icon" href="/images/1JkvDB7T1.png">
@@ -177,7 +172,7 @@
     <div id="content-body">
        
 
-<article id="post-Godot-scene-switcher" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-Everyone-s-Diary" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   
     
    
@@ -190,7 +185,7 @@
   
     
       <h1 class="p-name article-title" itemprop="headline name">
-        Godot 4.2 - Switch Scenes, Handle Scenes and Quit Game by GDScript
+        Everyone&#39;s Diary
       </h1>
     
   
@@ -198,7 +193,7 @@
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2023-10-11T21:42:17.000Z" itemprop="datePublished">2023-10-12</time>
+  <time class="dt-published" datetime="2023-03-22T13:15:48.000Z" itemprop="datePublished">2023-03-22</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
@@ -209,33 +204,36 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            239 words 
+            453 words 
           </div>
         </div>
         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/All/" rel="tag">All</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li></ul>
-
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          <blockquote>
-<p>In this article, Setsuna will walk you through a handy GDScript class that simplifies the process of switching scenes, reloading the current scene, and quitting the game.</p>
+          <p>Setsuna compiled this for personal archives, optimizing the PDF files for horizontal A4 paper divided into 3 columns, for paper archives and reading on landscape computer screens. </p>
+<p>Setsuna did this 3 years ago and this is the second time Setsuna releasing it publicly. </p>
+<blockquote>
+<p><strong>Please do not redistribute without source or removing source information, thank you!</strong></p>
 </blockquote>
-<h2 id="SceneManager-class"><a href="#SceneManager-class" class="headerlink" title="SceneManager class"></a>SceneManager class</h2><p>To streamline scene management in a Godot project, a custom GDScript <code>class</code> named <code>SceneManager</code> will be created. This class will utilize a <code>dictionary</code> to store the paths to different scenes, making it easier to reference them with friendly aliases.</p>
-<p>Setsuna is using Godot version 4.2-dev, but the concept is the same for various versions.</p>
-<p>Here is he code: </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">extends Node</span><br><span class="line">class_name SceneManager</span><br><span class="line"></span><br><span class="line">@export var Scenes : Dictionary = &#123;</span><br><span class="line">	&quot;main&quot;: &quot;res://scene/main_screen_fisrt.tscn&quot;,</span><br><span class="line">	&quot;somescene&quot;: &quot;res://path_to_file&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var m_CurrentSceneAlias : String = &quot;&quot;</span><br><span class="line">var scene_to_switch_to : String</span><br><span class="line"></span><br><span class="line">func AddScene(sceneAlias : String, scenePath : String) -&gt; void:</span><br><span class="line">	Scenes[sceneAlias] = scenePath</span><br><span class="line"></span><br><span class="line">func RemoveScene(sceneAlias : String) -&gt; void:</span><br><span class="line">	Scenes.erase(sceneAlias)</span><br><span class="line"></span><br><span class="line">func SwitchScene(sceneAlias : String) -&gt; void:</span><br><span class="line">	get_tree().change_scene_to_file(Scenes[sceneAlias])</span><br><span class="line"></span><br><span class="line">func RestartScene() -&gt; void:</span><br><span class="line">	get_tree().reload_current_scene()</span><br><span class="line"></span><br><span class="line">func QuitGame() -&gt; void:</span><br><span class="line">	get_tree().quit()</span><br></pre></td></tr></table></figure>
+<p>This dream began in early April 2019.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;body details&quot;</span>&gt;</span> April 10, 2019 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;body details&quot;</span>&gt;</span>  </span><br><span class="line">Deleted Account converted a basic group to the supergroup &quot;大家的日记本&quot;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use"></a>How to use</h2><p>Initialization: First, configure the <code>Autoload</code> feature in <code>project settings</code>. This step ensures that the SceneManager class is accessible throughout out whole project.</p>
-<p>In the example provided by Setsuna, an instance with the name “SM” of the <code>SceneManager.gd</code> script is created.</p>
-<p><img src="/images/1249182647.png"></p>
-<p>Just call the function <del>aloud</del>, or with the nickname when the function needs one.</p>
-<p>For example:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">func _on_quit_pressed():</span><br><span class="line">	SM.QuitGame()</span><br><span class="line"></span><br><span class="line">func _on_main_menu_pressed():</span><br><span class="line">	SM.SwitchScene(&quot;main&quot;)</span><br><span class="line"></span><br><span class="line">func _on_restart_pressed():</span><br><span class="line">    SM.RestartScene()</span><br></pre></td></tr></table></figure>
-
-<p>That’s it. Really simple.</p>
-<p><em>May you have a smoother game development,</em><br><em>and happy game-making with Godot 4.2!</em><br><em>Setsuna</em><br><em>23&#x2F;10&#x2F;12 Midnight</em></p>
-<p><img src="/images/1EkzP0pFa.png"></p>
+<p>A user named <em>Deleted Account</em> created a Telegram group for people to use as a “public diary” where they could freely record memories from their lives. </p>
+<p>Over the next two years, many people would come to leave records of their lives for a period of time. Many people came and went. Eventually, only one person was left in the public diary, until finally just ad bots spamming remained, until the “group does not exist.”</p>
+<p>What was that feeling like? Setsuna imagine it was a bit like a family, quietly understanding and warming and accompanying each other with records of memories. That was also the first time Setsuna felt “warmth” on the Internet. Although everyone was just recording, using ordinary non-artistic words and casual daily photos to write about their lives, without much chatting or interaction, just knowing of each other’s existence and company, living on with the attitude “let’s keep on living” or leaving with “life is enough”, was comforting.</p>
+<p>This wasn’t the first time Setsuna had the childish notion of wanting to preserve memories. The desire to “preserve memories” is probably innate to me. Although Setsuna didn’t have the ability to save photos and videos in Setsuna’s elementary school, from middle school on Setsuna properly archived and backed up all photos and videos. Setsuna also kept some objects, gifts from friends, small meaningful things, playful yearbooks…even stage props discarded after class plays, and discarded student work (handwriting) secretly taken from offices. </p>
+<p>Does time really fade everything? Maybe, like the tides washing away the footprints of people coming and going on the beach. </p>
+<p>Memories are so fragile, and become completely different from the rapidly changing present. But getting lost in memories and illusions doesn’t seem so bad.</p>
+<blockquote>
+<p>“I think I will forget many people, but you truly left a deep impression in my memories. I will remember you.<br>I also ask you to remember me.”<br><em>From Setsuna’s deskmate</em></p>
+</blockquote>
+<p>Below is the final PDF release of “Everyone’s Diary”:</p>
+<p><a target="_blank" rel="noopener" href="https://paofv.icu/others/%E5%A4%A7%E5%AE%B6%E7%9A%84%E6%97%A5%E8%AE%B0%E6%9C%AC%E6%9C%80%E7%BB%88%E7%89%88.pdf">Link to the file</a></p>
+<p>Setsuna just want to keep the memories, don’t let them disappear.</p>
+<p>Setsuna will do her best to preserve everyone’s memories!</p>
+<p>Compiled and formatted by Setsuna</p>
+<p><em>Setsuna</em><br><em>23&#x2F;3&#x2F;22</em></p>
 
         
       </div>
@@ -250,25 +248,20 @@
 <nav id="article-nav">
   <a class="article-nav-btn left "
     
-      href="/2023/10/18/Setsuna-s-new-blog-again/"
-      title="Setsuna's Blog Returning (again)"
+      href="/2023/08/01/Paws-and-Passion-A-Wolf-Hunter-s-Journey-with-Her-Wolf-Girlfriend/"
+      title="Paws and Passion: A Wolf Hunter's Journey with Her Wolf Girlfriend"
      >
     <i class="fa-solid fa-angle-left"></i>
     <p class="title-text">
       
-        Setsuna&#39;s Blog Returning (again)
+        Paws and Passion: A Wolf Hunter&#39;s Journey with Her Wolf Girlfriend
         
     </p>
   </a>
-  <a class="article-nav-btn right "
-    
-      href="/2023/08/02/Memoirs-1-3/"
-      title="Memoirs 1-3"
+  <a class="article-nav-btn right  disabled "
      >
 
     <p class="title-text">
-      
-        Memoirs 1-3
         
     </p>
     <i class="fa-solid fa-angle-right"></i>
